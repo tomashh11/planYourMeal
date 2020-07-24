@@ -1,0 +1,89 @@
+.footerContainer {
+  background-color: $navigationColor;
+  .widthContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $fontWhite;
+    font-family: $textFont;
+    padding: 40px 0 40px;
+    .footerFirstColumn {
+      width: 30%;
+      height: 150px;
+      .footerTitle {
+        font-size: 1.8rem;
+        padding-bottom: 15px;
+        .footerDescription {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .footerSecondColumn {
+      width: 30%;
+      height: 150px;
+      margin-left: 295px;
+      .footerTitle {
+        font-size: 1.8rem;
+        padding-bottom: 15px;
+        margin-left: -20px;
+        .footerDescription {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .footerThirdColumn {
+      width: 30%;
+      height: 150px;
+      padding-left: 162px;
+      .footerTitle {
+        font-size: 1.8rem;
+        padding-bottom: 15px;
+      }
+      .footerSubmitContainer {
+        input[type="text"] {
+          font-size: 1.4rem;
+          width: 150px;
+          position: relative;
+        }
+        button[type="submit"] {
+          font-size: 1rem;
+          background-color: $buttonsColor;
+          padding: 6px 26px;
+          border: none;
+          color: $fontWhite;
+          font-weight: 700;
+          position: relative;
+          right: 6px;
+          bottom: 2px;
+        }
+        button[type="submit"]:hover{
+          cursor: pointer;
+        }
+      }
+      .footerSocialMedia {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 2.2rem;
+        width: 180px;
+      }
+    }
+  }
+}
+
+.footerCopyRight {
+  width: 100vw;
+  height: 8vh;
+  background-color: $headerColor;
+  text-align: center;
+  line-height: 8vh;
+  font-family: $textFont;
+  font-size: 1.2rem;
+  font-weight: 300;
+  p {
+    color: $fontWhite;
+  }
+  span {
+    color: $buttonsColor;
+  }
+}

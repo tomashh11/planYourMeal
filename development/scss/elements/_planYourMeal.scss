@@ -1,0 +1,838 @@
+.planYourMealContainer {
+  background-image: url(../jpg/image.png);
+  .messageAndForm {
+    position: relative;
+    font-family: $textFont;
+    color: $headerColor;
+    .messageAndFormBgc {
+      position: absolute;
+      left: 310px;
+      top: 175px;
+      background-color: $backgroundColor;
+      width: 78vw;
+      height: 78vh;
+      border: 0.5px dashed $headerColor;
+      .messageAndFormTitle {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        .messageAndFormSpan {
+          font-size: 2.6rem;
+          font-weight: 700;
+        }
+      }
+      .messageAndFormInputAndBtnContainer {
+        text-align: center;
+        input[type="text"] {
+          margin-top: 20px;
+          padding-left: 8px;
+          border: 0.1px solid $navigationColor;
+          width: 15vw;
+          height: 30px;
+          font-family: $textFont;
+        }
+        button[type="submit"] {
+          cursor: pointer;
+          font-size: 1.2rem;
+          font-weight: 700;
+          margin-top: 20px;
+          border: none;
+          background-color: $buttonsColor;
+          color: $fontWhite;
+          padding: 8px 20px;
+        }
+      }
+      .messageAndFormDescription {
+        margin-top: 40px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+    .dashboard {
+      display: none;
+      position: absolute;
+      left: 300px;
+      top: 170px;
+      .dashboardHeader {
+        display: flex;
+        .widgets {
+          display: flex;
+          color: $green;
+          .newRecipe {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 0.5px dashed $green;
+            background-color: $backgroundColor;
+            width: 230px;
+            height: 230px;
+            .fa-plus-square {
+              font-size: 5rem;
+            }
+            .newRecipeTxt {
+              font-size: 1.6rem;
+              margin-top: 20px;
+            }
+          }
+          .newPlan {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            border: 0.5px dashed $green;
+            background-color: $backgroundColor;
+            width: 230px;
+            height: 230px;
+            .fa-plus-square {
+              font-size: 5rem;
+            }
+            .newPlanTxt {
+              font-size: 1.6rem;
+              margin-top: 20px;
+            }
+          }
+        }
+        .dashboardMessages {
+          .numbersOfRecipes {
+            display: flex;
+            color: $blue;
+            font-size: 1.6rem;
+            height: 70px;
+            width: 800px;
+            margin-left: 20px;
+            border: 0.5px dashed $blue;
+            background-color: $backgroundColor;
+            .fa-info-circle {
+              line-height: 70px;
+              font-size: 3rem;
+              margin: 0 20px 0 5px;
+            }
+            .recipesTxt {
+              line-height: 70px;
+            }
+            .fa-window-close {
+              font-size: 1.2rem;
+              margin: 5px 0 0 342px;
+            }
+          }
+          .planRemember {
+            display: flex;
+            color: $orange;
+            font-size: 1.6rem;
+            height: 70px;
+            width: 800px;
+            margin-left: 20px;
+            margin-top: 10px;
+            border: 0.5px dashed $orange;
+            background-color: $backgroundColor;
+            .fa-exclamation-circle {
+              line-height: 70px;
+              font-size: 3rem;
+              margin: 0 20px 0 5px;
+            }
+            .planTxt {
+              line-height: 70px;
+            }
+            .fa-window-close {
+              font-size: 1.2rem;
+              margin: 5px 0 0 392px;
+
+            }
+          }
+          .goodLuck {
+            display: flex;
+            color: $green;
+            font-size: 1.6rem;
+            height: 70px;
+            width: 800px;
+            margin-left: 20px;
+            margin-top: 10px;
+            border: 0.5px dashed $green;
+            background-color: $backgroundColor;
+            .fa-check-circle {
+              line-height: 70px;
+              font-size: 3rem;
+              margin: 0 20px 0 5px;
+            }
+            .luckTxt {
+              line-height: 70px;
+            }
+            .fa-window-close {
+              font-size: 1.2rem;
+              margin: 5px 0 0 35px;
+            }
+          }
+        }
+      }
+      .weekPlan {
+        background-color: $backgroundColor;
+        border: 0.5px dashed $headerColor;
+        margin-top: 30px;
+        $colLimit: 7;
+        .weekPlanContainer {
+          width: 94%;
+          max-width: 1300px;
+          margin: 0 auto;
+
+          .row {
+            margin-bottom: -3px;
+
+            &:before,
+            &:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
+            [class*='col-'] {
+              float: left;
+              min-height: 1px;
+              // gutter
+              padding: 5px;
+            }
+
+            @for $i from 1 through $colLimit {
+              .col-#{$i} {
+                width: ($i/$colLimit) *100%;
+              }
+            }
+          }
+        }
+
+        .col-7 {
+          font-size: 1.8rem;
+          margin: 10px 0;
+          color: $buttonsColor;
+          font-weight: 400;
+        }
+
+        .title .col-1 {
+          font-size: 1.5rem;
+          color: $navigationColor;
+          font-weight: 700;
+          margin: 10px 0;
+        }
+
+        .col-1 {
+          font-size: 1.2rem;
+          color: $tableColor;
+          text-align: center;
+          margin: 8px 0;
+        }
+
+        .underline {
+          width: 100%;
+          max-width: 1300px;
+          height: 0.7px;
+          background: $navigationColor;
+        }
+
+        .title {
+          font-weight: 700;
+        }
+
+        .header {
+          text-align: center;
+        }
+
+        .prevNextContainer {
+          width: 98%;
+          max-width: 1300px;
+          margin: 1.2rem auto 0;
+          font-size: 1rem;
+          color: $buttonsColor;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .prev {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 400;
+          margin-bottom: 5px;
+
+          &::before {
+            content: "\f100";
+            font-family: "Font Awesome 5 Free";
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            font-weight: 700;
+          }
+        }
+
+        .next {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 400;
+          margin-bottom: 5px;
+
+          &::after {
+            content: "\f101";
+            font-family: "Font Awesome 5 Free";
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .planYourMealHeader {
+    font-family: $logoFont;
+    background-color: $headerColor;
+    height: 15vh;
+    line-height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    .planYourMealH1 {
+      margin-left: 15px;
+      a {
+        text-decoration: none;
+      }
+    }
+    #planYourMealFirst {
+      font-weight: 100;
+      color: $fontWhite;
+    }
+    #planYourMEalSecond {
+      color: $buttonsColor;
+      font-weight: 700;
+    }
+    .planYourMealName {
+      display: flex;
+      color: $fontWhite;
+      font-family: $textFont;
+      font-size: 1.8rem;
+      font-weight: 300;
+      margin-right: 3rem;
+      &::after {
+        content: "\f2bd";
+        font-family: "Font Awesome 5 Free";
+        font-size: 2.5rem;
+        color: $buttonsColor;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+  .planYourMealLeftPanel {
+    width: 15vw;
+    height: 85vh;
+    background-color: $navigationColor;
+    display: flex;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      font-family: 'Open Sans';
+      color: $fontWhite;
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
+    a:hover {
+      font-weight: 400;
+    }
+    .desktop {
+      height: 15%;
+      display: flex;
+      align-items: center;
+      padding-left: 1.5rem;
+    }
+    .desktop:hover {
+      border-left: 6px solid $buttonsColor;
+      &::after {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-size: 1.5rem;
+        color: $buttonsColor;
+        margin-left: 8.3rem;
+      }
+    }
+    .recipes {
+      height: 15%;
+      display: flex;
+      align-items: center;
+      padding-left: 1.5rem;
+    }
+    .recipes:hover {
+      border-left: 6px solid $buttonsColor;
+      &::after {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-size: 1.5rem;
+        color: $buttonsColor;
+        margin-left: 6.5rem;
+      }
+    }
+    .plans {
+      height: 15%;
+      display: flex;
+      align-items: center;
+      padding-left: 1.5rem;
+    }
+    .plans:hover {
+      border-left: 6px solid $buttonsColor;
+      &::after {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-size: 1.5rem;
+        color: $buttonsColor;
+        margin-left: 8.5rem;
+      }
+    }
+  }
+  .recipesContainer {
+    display: none;
+    position: absolute;
+    top: 120px;
+    left: 310px;
+    background-color: $backgroundColor;
+    border: 0.5px dashed $headerColor;
+    width: 1300px;
+    height: 740px;
+    margin: 3rem auto 0;
+    font-family: $textFont;
+    .recipesHeader {
+      display: flex;
+      justify-content: space-between;
+      width: 96%;
+      margin: 20px auto 0;
+      .recipesH1 {
+        color: $buttonsColor;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+      .recipesBtn {
+        padding: 6px 8px;
+        font-weight: bold;
+        font-size: 1rem;
+        color: $fontWhite;
+        background-color: $buttonsColor;
+        margin-bottom: 5px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .recipesUnderline {
+      height: 2px;
+      background-color: $tableColor;
+      width: 96%;
+      margin: 0 auto;
+    }
+    .recipeName {
+      display: flex;
+      margin-top: 10px;
+      .recipesH2 {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $navigationColor;
+        margin: 0 2rem;
+      }
+      #recipeName {
+        outline: none;
+        height: 30px;
+        width: 850px;
+        border: 1px solid $tableColor;
+      }
+    }
+    .recipeDescription {
+      display: flex;
+      margin-top: 10px;
+      .recipesH2 {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $navigationColor;
+        margin: 0 2rem;
+      }
+      #recipesDescription {
+        outline: none;
+        width: 850px;
+        border: 1px solid $tableColor;
+        margin-left: 25px;
+      }
+    }
+    .mainRecipeContainer {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px auto 0;
+      width: 96%;
+      .recipeInstruction {
+        width: 50%;
+        .recipeH3 {
+          font-size: 1.6rem;
+          color: $navigationColor;
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+        .recipesUnderline {
+          margin: 0;
+        }
+        .recipesInstructionContainer {
+          margin-top: 10px;
+          display: flex;
+          justify-content: flex-start;
+          #instruction {
+            width: 85%;
+            margin-left: 15px;
+            border: 1px solid $tableColor;
+          }
+          .recipesAdd {
+            display: flex;
+            color: green;
+            margin: -2px 0 0 6px;
+            font-size: 2rem;
+          }
+        }
+        .recipesNavInstruction {
+          margin: 50px 0 0 18px;
+          width: 485px;
+          height: 280px;
+          overflow: scroll;
+          .olInstruction {
+            margin-left: 18px;
+          }
+        }
+      }
+      .recipeProduct {
+        width: 50%;
+        .recipeH3 {
+          font-size: 1.6rem;
+          color: $navigationColor;
+          text-transform: uppercase;
+          font-weight: 400;
+          margin-left: 23px;
+        }
+        .recipesUnderline {
+          margin-left: 23px;
+        }
+        .recipesProductContainer {
+          margin-top: 10px;
+          display: flex;
+          justify-content: center;
+          #product {
+            width: 88%;
+            margin-top: 15px;
+            margin-left: 12px;
+            border: 1px solid $tableColor;
+          }
+          .recipesAdd {
+            display: flex;
+            color: green;
+            margin: 13px 0 0 6px;
+            font-size: 2rem;
+          }
+        }
+        .recipesNavProduct {
+          margin: 82px 0 0 25px;
+          width: 505px;
+          height: 280px;
+          overflow: scroll;
+          .ulProduct {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+  .listOfRecipesContainer {
+    display: none;
+    background-color: $backgroundColor;
+    border: 0.5px dashed $headerColor;
+    position: absolute;
+    top: 170px;
+    left: 320px;
+    width: 1300px;
+    height: 740px;
+    $colLimit: 12;
+    .listOfRecipes {
+      width: 94%;
+      margin: 0 auto;
+      .header {
+        .col-11 {
+          font-size: 2rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          font-family: $textFont;
+          color: $buttonsColor;
+          margin-left: -8px;
+        }
+        .col-1 {
+          color: $green;
+          font-size: 2rem;
+          display: flex;
+          justify-content: flex-end;
+          margin: 10px 0 0 8px;
+        }
+      }
+      .row {
+        margin-bottom: -3px;
+        &:before,
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        [class*='col-'] {
+          float: left;
+          min-height: 1px;
+          // gutter
+          padding: 5px 0 5px 5px;
+        }
+
+        @for $i from 1 through $colLimit {
+          .col-#{$i} {
+            width: ($i/$colLimit) *100%;
+          }
+        }
+      }
+    }
+
+    .underlineFirst {
+      width: 100%;
+      max-width: 1300px;
+      height: 2px;
+      background: $tableColor;
+      margin-top: -2px;
+    }
+
+    .underlineSecond {
+      margin: 15px auto 0;
+      height: .5px;
+      background: $tableColor;
+      width: 98%;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      font-family: $textFont;
+      text-transform: uppercase;
+      color: $headerColor;
+      width: 98%;
+      margin: 10px auto 0;
+    }
+    .underlineRow {
+      margin: 10px auto 0;
+      height: .5px;
+      background: $tableColor;
+      width: 98%;
+    }
+    .mainListOfRecipesContainer {
+      overflow: scroll;
+      height: 605px;
+      .divListOfRecipesContainer {
+        padding-top: 10px;
+        font-family: $textFont;
+        color: $tableColor;
+        display: flex;
+        .spanID {
+          width: 95px;
+          height: 100px;
+          margin-left: 16px;
+        }
+        .spanRecipeName {
+          width: 275px;
+          margin-left: 6px;
+        }
+        .spanRecipeDescription {
+          width: 640px;
+          margin-left: 25px;
+        }
+        .spanButtonsAction {
+          width: 90px;
+          margin-left: 55px;
+          .fa-trash-alt, .fa-edit {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      .divUnderline {
+        margin: 10px auto 0;
+        height: .5px;
+        background: $tableColor;
+        width: 100%;
+      }
+    }
+  }
+  .addPlan {
+    background-color: $backgroundColor;
+    border: 0.5px dashed $headerColor;
+    position: absolute;
+    top: 1000px;
+    left: 320px;
+    width: 1300px;
+    height: 630px;
+    font-family: $textFont;
+    $colLimit: 6;
+    .planHeader {
+      display: flex;
+      justify-content: space-between;
+      width: 96%;
+      margin: 20px auto 0;
+      .planH1 {
+        color: $buttonsColor;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+      .planBtn {
+        padding: 6px 12px;
+        font-weight: bold;
+        font-size: 1rem;
+        color: $fontWhite;
+        background-color: $buttonsColor;
+        margin-bottom: 5px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .planUnderlineFirst {
+      height: 2px;
+      background-color: $tableColor;
+      width: 96%;
+      margin: 0 auto;
+    }
+    .planName {
+      color: $navigationColor;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin: 10px 0 0 40px;
+      .planH2 {
+        font-weight: 300;
+      }
+      #planName {
+        width: 950px;
+        height: 30px;
+        font-size: 20px;
+        margin-left: 50px;
+      }
+    }
+    .planDescription {
+      color: $navigationColor;
+      font-size: 1.2rem;
+      display: flex;
+      width: 90%;
+      margin: 10px 0 0 40px;
+      .planH2 {
+        font-weight: 300;
+      }
+      #planDescription {
+        width: 950px;
+        font-size: 20px;
+        margin-left: 77px;
+      }
+    }
+    .newPlanWeekNumber {
+      color: $navigationColor;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin: 10px 0 0 40px;
+      .newPlanWeekNumberH2 {
+        font-weight: 300;
+      }
+      #newWeekNumber {
+        font-size: 20px;
+        height: 30px;
+        width: 50px;
+        margin-left: 15px;
+      }
+    }
+    .planUnderlineSecondContainer {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 90px;
+      .planUnderlineSecond {
+        height: .5px;
+        width: 80%;
+        background-color: $tableColor;
+        margin-top: 15px;
+      }
+    }
+    .newPlanContainer {
+      .row {
+        margin-bottom: -3px;
+        &:before,
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        [class*='col-'] {
+          float: left;
+          min-height: 1px;
+          // gutter
+          padding: 5px 0 5px 5px;
+        }
+
+        @for $i from 1 through $colLimit {
+          .col-#{$i} {
+            width: ($i/$colLimit) *100%;
+          }
+        }
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $navigationColor;
+        text-transform: uppercase;
+        height: 65px;
+        margin-right: 90px;
+        .col-1 {
+          text-align: center;
+        }
+      }
+      .underline {
+        height: .5px;
+        width: 90%;
+        background-color: $tableColor;
+        margin: 5px 40px 0;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-right: 90px;
+        .monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday {
+          font-size: 1rem;
+          font-weight: 700;
+          color: $navigationColor;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .fa-trash-alt {
+    color: brown;
+    font-size: 15px;
+    margin-left: 5px;
+  }
+
+  .fa-edit {
+    color: orange;
+    font-size: 15px;
+    margin-left: 5px;
+  }
+}
+
+
+
+
+

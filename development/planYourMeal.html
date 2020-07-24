@@ -1,0 +1,558 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Zaplanuj Jedzonko</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+<div class="planYourMealContainer">
+    <section class="messageAndForm">
+        <div class="messageAndFormBgc">
+            <div class="messageAndFormTitle"><span class="messageAndFormSpan">Witaj,</span></br></br>wygląda na to, że
+                jesteś tutaj</br>pierwszy raz!
+            </div>
+            <div class="messageAndFormInputAndBtnContainer">
+                <form>
+                    <input type="text" placeholder="tutaj wpisz jak masz na imię" id="userName">
+                    </br>
+                    <button type="submit">Gotowe!</button>
+                </form>
+            </div>
+            <p class="messageAndFormDescription">Podaj nam swoje imię, a my zorganizujemy</br> dla Ciebie naszą
+                aplikację :)</p>
+        </div>
+        <div class="dashboard">
+            <div class="dashboardHeader">
+                <div class="widgets">
+                    <div class="newRecipe">
+                        <i class="far fa-plus-square"></i>
+                        <div class="newRecipeTxt">dodaj przepis</div>
+                    </div>
+                    <div class="newPlan">
+                        <i class="far fa-plus-square"></i>
+                        <div class="newPlanTxt">dodaj plan</div>
+                    </div>
+                </div>
+                <div class="dashboardMessages">
+                    <div class="numbersOfRecipes">
+                        <i class="fas fa-info-circle"></i>
+                        <div class="recipesTxt">Masz już 99 przepisów, nieźle!</div>
+                        <i class="fas fa-window-close"></i>
+                    </div>
+                    <div class="planRemember">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div class="planTxt">Pamiętaj, aby dodać plan!</div>
+                        <i class="fas fa-window-close"></i></div>
+                    <div class="goodLuck">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="luckTxt">Świetnie, że jesteś! Udanego planowania i smacznego! :)</div>
+                        <i class="fas fa-window-close"></i></div>
+                </div>
+            </div>
+            <div class="weekPlan">
+                <div class="weekPlanContainer">
+                    <div class="row header">
+                        <div class="col-7 weekNumber">Twój plan na {nr_tygodnia} tydzień:</div>
+                    </div>
+                    <div class="underline"></div>
+                    <div class="row title">
+                        <div class="col-1">Poniedziałek</div>
+                        <div class="col-1">Wtorek</div>
+                        <div class="col-1">Środa</div>
+                        <div class="col-1">Czwartek</div>
+                        <div class="col-1">Piątek</div>
+                        <div class="col-1">Sobota</div>
+                        <div class="col-1">Niedziela</div>
+                    </div>
+                    <div class="underline"></div>
+                    <div class="row">
+                        <div class="col-1 firstBreakfastMonday">śniadanie</div>
+                        <div class="col-1 firstBreakfastTuesday">śniadanie</div>
+                        <div class="col-1 firstBreakfastWednesday">śniadanie</div>
+                        <div class="col-1 firstBreakfastThursday">śniadanie</div>
+                        <div class="col-1 firstBreakfastFriday">śniadanie</div>
+                        <div class="col-1 firstBreakfastSaturday">śniadanie</div>
+                        <div class="col-1 firstBreakfastSunday">śniadanie</div>
+                    </div>
+                    <div class="underline"></div>
+                    <div class="row">
+                        <div class="col-1 secondBreakfastMonday">drugie <br> śniadanie</div>
+                        <div class="col-1 secondBreakfastTuesday">drugie <br> śniadanie</div>
+                        <div class="col-1 secondBreakfastWednesday">drugie <br> śniadanie</div>
+                        <div class="col-1 secondBreakfastThursday">drugie <br> śniadanie</div>
+                        <div class="col-1 secondBreakfastFriday">drugie <br> śniadanie</div>
+                        <div class="col-1 secondBreakfastSaturday">drugie <br> śniadanie</div>
+                        <div class="col-1 secondBreakfastSunday">drugie <br> śniadanie</div>
+                    </div>
+                    <div class="underline"></div>
+                    <div class="row">
+                        <div class="col-1 soupMonday">zupa</div>
+                        <div class="col-1 soupTuesday">zupa</div>
+                        <div class="col-1 soupWednesday">zupa</div>
+                        <div class="col-1 soupThursday">zupa</div>
+                        <div class="col-1 soupFriday">zupa</div>
+                        <div class="col-1 soupSaturday">zupa</div>
+                        <div class="col-1 soupSunday">zupa</div>
+                    </div>
+                    <div class="underline"></div>
+                    <div class="row">
+                        <div class="col-1 mainCourseMonday">drugie <br> danie</div>
+                        <div class="col-1 mainCourseTuesday">drugie <br> danie</div>
+                        <div class="col-1 mainCourseWednesday">drugie <br> danie</div>
+                        <div class="col-1 mainCourseThursday">drugie <br> danie</div>
+                        <div class="col-1 mainCourseFriday">drugie <br> danie</div>
+                        <div class="col-1 mainCourseSaturday">drugie <br> danie</div>
+                        <div class="col-1 mainCourseSunday">drugie <br> danie</div>
+                    </div>
+                    <div class="underline"></div>
+                    <div class="row">
+                        <div class="col-1 supperMonday">kolacja</div>
+                        <div class="col-1 supperTuesday">kolacja</div>
+                        <div class="col-1 supperWednesday">kolacja</div>
+                        <div class="col-1 supperThursday">kolacja</div>
+                        <div class="col-1 supperFriday">kolacja</div>
+                        <div class="col-1 supperSaturday">kolacja</div>
+                        <div class="col-1 supperSunday">kolacja</div>
+                    </div>
+                    <div class="underline"></div>
+                </div>
+                <div class="prevNextContainer">
+                    <div class="prev">poprzedni</div>
+                    <div class="next">następny</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="planYourMealHeader">
+        <h1 class="planYourMealH1">
+            <a href="index.html">
+                <span id="planYourMealFirst">Zaplanuj</span>
+                <span id="planYourMealSecond">Jedzonko</span>
+            </a>
+        </h1>
+        <span class="planYourMealName">Imię</span>
+    </div>
+    <aside class="planYourMealLeftPanel">
+        <h2 class="desktop">
+            <a href="planYourMeal.html">Pulpit</a>
+        </h2>
+        <h2 class="recipes">
+            <a href="#listOfRecipes" id="recipesButton">Przepisy</a>
+        </h2>
+        <h2 class="plans">
+            <a href="schedules.html">Plany</a>
+        </h2>
+    </aside>
+    <section class="recipesContainer">
+        <form>
+            <div class="recipesHeader">
+                <h1 class="recipesH1">nowy przepis</h1>
+                <button type="submit" class="recipesBtn">Zapisz i zamknij</button>
+            </div>
+            <div class="recipesUnderline"></div>
+            <div class="recipeName">
+                <h2 class="recipesH2">Nazwa przepisu</h2>
+                <label><input type="text" name="" id="recipeName" maxlength="50"></label>
+            </div>
+            <div class="recipeDescription">
+                <h2 class="recipesH2">Opis przepisu</h2>
+                <textarea name="" id="recipesDescription" cols="0" rows="5" maxlength="360"></textarea>
+            </div>
+            <main class="mainRecipeContainer">
+                <div class="recipeInstruction">
+                    <h3 class="recipeH3">instrukcje</h3>
+                    <div class="recipesUnderline"></div>
+                    <div class="recipesInstructionContainer">
+                        <textarea name="" id="instruction" cols="80" rows="6" maxlength="150"></textarea>
+                        <div class="recipesAdd recipesAddInstruction"><i class="fas fa-plus-square"></i></div>
+                    </div>
+                    <nav class="recipesNavInstruction">
+                        <ol class="olInstruction"></ol>
+                    </nav>
+                </div>
+                <div class="recipeProduct">
+                    <h3 class="recipeH3">składniki</h3>
+                    <div class="recipesUnderline"></div>
+                    <div class="recipesProductContainer">
+                        <textarea name="" id="product" cols="80" rows="3"></textarea>
+                        <div class="recipesAdd recipesAddProduct"><i class="fas fa-plus-square"></i></div>
+                    </div>
+                    <nav class="recipesNavProduct">
+                        <ul class="ulProduct"></ul>
+                    </nav>
+                </div>
+            </main>
+        </form>
+    </section>
+    <section class="listOfRecipesContainer" id="listOfRecipes">
+        <div class="listOfRecipes">
+            <div class="row header">
+                <div class="col-11">lista przepisów</div>
+                <div class="col-1"><i class="fas fa-plus-square"></i></div>
+            </div>
+            <div class="underlineFirst"></div>
+            <div class="underlineSecond"></div>
+            <div class="row title">
+                <div class="col-1">id</div>
+                <div class="col-3">nazwa</div>
+                <div class="col-7">opis</div>
+                <div class="col-1">akcje</div>
+            </div>
+            <div class="underlineRow"></div>
+            <div class="mainListOfRecipesContainer"></div>
+        </div>
+    </section>
+    <section class="addPLan">
+        <form>
+            <div class="planHeader">
+                <h1 class="planH1">nowy plan</h1>
+                <button type="submit" class="planBtn">Zapisz i zamknij</button>
+            </div>
+            <div class="planUnderlineFirst"></div>
+            <div class="planName">
+                <h2 class="planH2">Nazwa planu</h2>
+                <label><input type="text" name="" id="planName" maxlength="50"></label>
+            </div>
+            <div class="planDescription">
+                <h2 class="planH2">Opis planu</h2>
+                <textarea name="" id="planDescription" cols="0" rows="5" maxlength="360"></textarea>
+            </div>
+            <div class="newPlanWeekNumber">
+                <h2 class="newPlanWeekNumberH2">Numer tygodnia</h2>
+                <label><input type="number" id="newWeekNumber"></label>
+            </div>
+            <div class="planUnderlineSecondContainer">
+                <div class="planUnderlineSecond"></div>
+            </div>
+            <div class="newPlanContainer">
+                <div class="row title">
+                    <div class="col-1"></div>
+                    <div class="col-1">śniadanie</div>
+                    <div class="col-1">drugie <br> śniadanie</div>
+                    <div class="col-1">zupa</div>
+                    <div class="col-1">drugie <br> danie</div>
+                    <div class="col-1">kolacja</div>
+                </div>
+                <div class="underline"></div>
+                <div class="row">
+                    <div class="col-1 monday">poniedziałek</div>
+                    <div class="col-1">
+                        <select class="mondayFirstBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="mondaySecondBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="mondaySoup">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="mondayMainCourse">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="mondaySupper">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="row">
+                    <div class="col-1 tuesday">wtorek</div>
+                    <div class="col-1">
+                        <select class="tuesdayFirstBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="tuesdaySecondBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="tuesdaySoup">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="tuesdayMainCourse">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="tuesdaySupper">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="row">
+                    <div class="col-1 wednesday">środa</div>
+                    <div class="col-1">
+                        <select class="wednesdayFirstBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="wednesdaySecondBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="wednesdaySoup">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="wednesdayMainCourse">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="wednesdaySupper">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="row">
+                    <div class="col-1 thursday">czwartek</div>
+                    <div class="col-1">
+                        <select class="thursdayFirstBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="thursdaySecondBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="thursdaySoup">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="thursdayMainCourse">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="thursdaySupper">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="row">
+                    <div class="col-1 friday">piątek</div>
+                    <div class="col-1">
+                        <select class="fridayFirstBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="fridaySecondBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="fridaySoup">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="fridayMainCourse">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="fridaySupper">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="row">
+                    <div class="col-1 saturday">sobota</div>
+                    <div class="col-1">
+                        <select class="saturdayFirstBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="saturdaySecondBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="saturdaySoup">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="saturdayMainCourse">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="saturdaySupper">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="row">
+                    <div class="col-1 sunday">niedziela</div>
+                    <div class="col-1">
+                        <select class="sundayFirstBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="sundaySecondBreakfast">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="sundaySoup">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="sundayMainCourse">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <select class="sundaySupper">
+                            <option value="potato">ziemniaki</option>
+                            <option value="egg">jajko</option>
+                            <option value="bread">chleb</option>
+                            <option value="apple">jabłko</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="underline"></div>
+            </div>
+        </form>
+    </section>
+</div>
+<script src="js/login.js"></script>
+<script src="js/newRecipe.js"></script>
+<script src="js/listOfRecipes.js"></script>
+<script src="js/newPlan.js"></script>
+<script src="js/weekView.js"></script>
+</body>
+</html>

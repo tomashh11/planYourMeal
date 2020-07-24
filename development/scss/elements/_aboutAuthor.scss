@@ -1,0 +1,30 @@
+.aboutAuthor {
+  background-color: $carouselBackground;
+  height: 50vh;
+  .widthContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    .aboutAuthorImage {
+      background-image: url(../jpg/smile.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 400px;
+      height: 300px;
+    }
+    .aboutAuthorText {
+      width: 50vw;
+      color: $fontBlack;
+      font-family: $textFont;
+      .aboutAuthorTitle {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+      .aboutAuthorDescription {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.aboutApp {
+  background-color: $carouselBackground;
+  color: $tableColor;
+  font-family: $textFont;
+  .aboutAppContainer {
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    .aboutAppSingleColumn {
+      width: 20%;
+      margin-top: 10vh;
+      text-align: center;
+      .aboutAppImage {
+        font-size: 5rem;
+      }
+      .aboutAppTitle {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin: 20px 0;
+        color: $headerColor;
+      }
+      .aboutAppDescription {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $headerColor;
+      }
+    }
+  }
+}

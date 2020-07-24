@@ -1,0 +1,43 @@
+.callToAction {
+  height: 32vh;
+  background-color: $headerColor;
+  .callToActionContainer {
+    display: flex;
+    justify-content: space-between;
+    .callToActionTextContainer {
+      color: $fontWhite;
+      font-family: $textFont;
+      width: 70vw;
+      height: 25vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+        padding-top: 40px;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+    }
+    .callToActionBtnContainer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 32vh;
+      a {
+        text-decoration: none;
+        color: $fontWhite;
+        font-size: 1.2rem;
+        font-family: $textFont;
+        font-weight: 700;
+        border: 1px solid $buttonsColor;
+        padding: 10px 30px;
+        background-color: $buttonsColor;
+      }
+    }
+  }
+}

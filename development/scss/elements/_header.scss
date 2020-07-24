@@ -1,0 +1,48 @@
+.headerContainer {
+  height: 15vh;
+  background-color: $headerColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .headerLogo {
+    margin-left: 4rem;
+    h1 {
+      font-family: $logoFont;
+      #first {
+        font-size: 2.5rem;
+        font-weight: 100;
+        color: white;
+      }
+      #second {
+        font-size: 2.5rem;
+        color: $buttonsColor;
+        font-weight: 700;
+      }
+    }
+  }
+  .headerUl {
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 5rem;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $fontWhite;
+        font-size: 1.2rem;
+        font-family: $textFont;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+      a:hover {
+        cursor: pointer;
+        color: $aHoverColor;
+      }
+    }
+  }
+}
+
+
+

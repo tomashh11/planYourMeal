@@ -1,0 +1,16 @@
+@import url("https://use.fontawesome.com/releases/v5.6.1/css/all.css");
+@import url('https://fonts.googleapis.com/css?family=Charmonman');
+@import "generic/reset";
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/general";
+
+@import "elements/footer";
+@import "elements/header";
+@import "elements/carousel";
+@import "../scss/elements/callToAction";
+@import "../scss/elements/aboutApp";
+@import "elements/form";
+@import "elements/aboutAuthor";
+@import "elements/planYourMeal";
+

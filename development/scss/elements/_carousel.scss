@@ -1,0 +1,66 @@
+.carouselSection {
+  font-family: $textFont;
+  color: $fontBlack;
+  background-color: $carouselBackground;
+  .carousel {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    .carouselElements {
+      list-style: none;
+      .carouselElement {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+      .carouselElementActive {
+        display: inline-block;
+        text-align: center;
+        width: 40vw;
+        .carouselText {
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: 300;
+        }
+        .carouselH1 {
+          font-weight: 400;
+          font-size: 2.2rem;
+        }
+      }
+    }
+    .btnCarousel {
+      width: 100px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background-color: transparent;
+      border: 0;
+      color: $fontWhite;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .btnCarouselPrev:focus {
+      outline: none;
+    }
+    .btnCarouselNxt {
+      right: 0;
+    }
+    .btnCarouselPrev {
+      left: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
