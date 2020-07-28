@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const maxWeekNumber = 52;
     const minWeekNumber = 1;
+    const numberOfMeals = 4;
 
     const weekPlanContainer = document.querySelector(".weekPlanContainer");
     const weekNumber = weekPlanContainer.querySelector(".weekNumber");
@@ -36,27 +37,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let currentPlanWeekNumber = Number(currentPlan.weekNumber);
 
-    weekNumber.innerHTML = `Twój plan na ${currentPlan.weekNumber} tydzień:`;
 
-    const numberOfMeals = 4;
+    function dashboardPlan(currentPlanParameter) {
 
-    for (let i = 0; i <= numberOfMeals; i++) {
-        for (let weekDay of weekDays) {
-            let dayName = weekDay.dayName;
+        for (let i = 0; i <= numberOfMeals; i++) {
+            for (let weekDay of weekDays) {
+                let dayName = weekDay.dayName;
 
-            let firstBreakfast = currentPlan.days[weekDay.dayNumber].firstBreakfast;
-            let secondBreakfast = currentPlan.days[weekDay.dayNumber].secondBreakfast;
-            let soup = currentPlan.days[weekDay.dayNumber].soup;
-            let mainCourse = currentPlan.days[weekDay.dayNumber].mainCourse;
-            let supper = currentPlan.days[weekDay.dayNumber].supper;
+                let firstBreakfast = currentPlanParameter.days[weekDay.dayNumber].firstBreakfast;
+                let secondBreakfast = currentPlanParameter.days[weekDay.dayNumber].secondBreakfast;
+                let soup = currentPlanParameter.days[weekDay.dayNumber].soup;
+                let mainCourse = currentPlanParameter.days[weekDay.dayNumber].mainCourse;
+                let supper = currentPlanParameter.days[weekDay.dayNumber].supper;
 
-            weekPlanContainer.querySelector(`.firstBreakfast${dayName}`).innerText = firstBreakfast;
-            weekPlanContainer.querySelector(`.secondBreakfast${dayName}`).innerText = secondBreakfast;
-            weekPlanContainer.querySelector(`.soup${dayName}`).innerText = soup;
-            weekPlanContainer.querySelector(`.mainCourse${dayName}`).innerText = mainCourse;
-            weekPlanContainer.querySelector(`.supper${dayName}`).innerText = supper;
+                weekPlanContainer.querySelector(`.firstBreakfast${dayName}`).innerText = firstBreakfast;
+                weekPlanContainer.querySelector(`.secondBreakfast${dayName}`).innerText = secondBreakfast;
+                weekPlanContainer.querySelector(`.soup${dayName}`).innerText = soup;
+                weekPlanContainer.querySelector(`.mainCourse${dayName}`).innerText = mainCourse;
+                weekPlanContainer.querySelector(`.supper${dayName}`).innerText = supper;
+            }
         }
-    }
+    };
+
+    weekNumber.innerHTML = `Twój plan na ${currentPlan.weekNumber} tydzień:`;
+    dashboardPlan(currentPlan);
+
 
     function resolveCurrentWeekPlan(currentWeekNumber, plansFromStorage) {
         let isCurrentWeekPlanPresent = plansFromStorage.has(currentWeekNumber);
@@ -76,75 +81,45 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextBtn = prevNextContainer.querySelector(".next");
     const prevBtn = prevNextContainer.querySelector(".prev");
 
-    function updateCurrentNextWeekNumber() {
+    function findNextWeekNumber() {
         for (let i = currentPlanWeekNumber + 1; i <= maxWeekNumber; i++) {
             if (plansFromStorage.has(i.toString())) {
-                currentPlanWeekNumber = i;
-                return currentPlanWeekNumber;
+                return i;
             }
         }
     };
 
     nextBtn.addEventListener('click', function () {
 
-        updateCurrentNextWeekNumber();
+        currentPlanWeekNumber = findNextWeekNumber();
 
-        weekNumber.innerHTML = `Twój plan na ${currentPlanWeekNumber} tydzień:`;
-
-        let planAfterCurrent = plansFromStorage.get(currentPlanWeekNumber.toString());
-
-        for (let i = 0; i <= numberOfMeals; i++) {
-            for (let weekDay of weekDays) {
-                let dayName = weekDay.dayName;
-
-                let firstBreakfast = planAfterCurrent.days[weekDay.dayNumber].firstBreakfast;
-                let secondBreakfast = planAfterCurrent.days[weekDay.dayNumber].secondBreakfast;
-                let soup = planAfterCurrent.days[weekDay.dayNumber].soup;
-                let mainCourse = planAfterCurrent.days[weekDay.dayNumber].mainCourse;
-                let supper = planAfterCurrent.days[weekDay.dayNumber].supper;
-
-                weekPlanContainer.querySelector(`.firstBreakfast${dayName}`).innerText = firstBreakfast;
-                weekPlanContainer.querySelector(`.secondBreakfast${dayName}`).innerText = secondBreakfast;
-                weekPlanContainer.querySelector(`.soup${dayName}`).innerText = soup;
-                weekPlanContainer.querySelector(`.mainCourse${dayName}`).innerText = mainCourse;
-                weekPlanContainer.querySelector(`.supper${dayName}`).innerText = supper;
-            }
+        if (currentPlanWeekNumber !== undefined) {
+            weekNumber.innerHTML = `Twój plan na ${currentPlanWeekNumber} tydzień:`;
+            let planAfterCurrent = plansFromStorage.get(currentPlanWeekNumber.toString());
+            dashboardPlan(planAfterCurrent);
+        } else {
+            alert("Nie ma więcej planów");
         }
     });
 
-    function updateCurrentBeforeWeekNumber() {
+    function findPreviousWeekNumber() {
         for (let i = currentPlanWeekNumber - 1; i >= minWeekNumber; i--) {
             if (plansFromStorage.has(i.toString())) {
-                currentPlanWeekNumber = i;
-                return currentPlanWeekNumber;
+                return i;
             }
         }
     };
 
     prevBtn.addEventListener('click', function () {
 
-        updateCurrentBeforeWeekNumber();
+        currentPlanWeekNumber = findPreviousWeekNumber();
 
-        weekNumber.innerHTML = `Twój plan na ${currentPlanWeekNumber} tydzień:`;
-
-        let planBeforeCurrent = plansFromStorage.get(currentPlanWeekNumber.toString());
-
-        for (let i = 0; i <= numberOfMeals; i++) {
-            for (let weekDay of weekDays) {
-                let dayName = weekDay.dayName;
-
-                let firstBreakfast = planBeforeCurrent.days[weekDay.dayNumber].firstBreakfast;
-                let secondBreakfast = planBeforeCurrent.days[weekDay.dayNumber].secondBreakfast;
-                let soup = planBeforeCurrent.days[weekDay.dayNumber].soup;
-                let mainCourse = planBeforeCurrent.days[weekDay.dayNumber].mainCourse;
-                let supper = planBeforeCurrent.days[weekDay.dayNumber].supper;
-
-                weekPlanContainer.querySelector(`.firstBreakfast${dayName}`).innerText = firstBreakfast;
-                weekPlanContainer.querySelector(`.secondBreakfast${dayName}`).innerText = secondBreakfast;
-                weekPlanContainer.querySelector(`.soup${dayName}`).innerText = soup;
-                weekPlanContainer.querySelector(`.mainCourse${dayName}`).innerText = mainCourse;
-                weekPlanContainer.querySelector(`.supper${dayName}`).innerText = supper;
-            }
+        if (currentPlanWeekNumber !== undefined) {
+            weekNumber.innerHTML = `Twój plan na ${currentPlanWeekNumber} tydzień:`;
+            let planBeforeCurrent = plansFromStorage.get(currentPlanWeekNumber.toString());
+            dashboardPlan(planBeforeCurrent);
+        } else {
+            alert("Nie ma więcej planów");
         }
     });
 });
