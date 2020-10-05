@@ -117,6 +117,9 @@
               line-height: 70px;
             }
             .fa-window-close {
+              position: absolute;
+              top: 0;
+              right: 8px;
               font-size: 1.2rem;
               margin: 5px 0 0 342px;
             }
@@ -669,10 +672,10 @@
     background-color: $backgroundColor;
     border: 0.5px dashed $headerColor;
     position: absolute;
-    top: 1000px;
-    left: 320px;
+    top: 170px;
+    left: 300px;
     width: 1300px;
-    height: 630px;
+    height: 740px;
     font-family: $textFont;
     $colLimit: 6;
     .planHeader {
@@ -815,7 +818,133 @@
           font-weight: 700;
           color: $navigationColor;
           text-transform: uppercase;
+          height: 45px;
         }
+      }
+    }
+  }
+
+  .listOfPlansContainer {
+    display: none;
+    background-color: $backgroundColor;
+    border: 0.5px dashed $headerColor;
+    position: absolute;
+    top: 170px;
+    left: 320px;
+    width: 1300px;
+    height: 740px;
+    $colLimit: 12;
+    .listOfPlans {
+      width: 94%;
+      margin: 0 auto;
+      .header {
+        .col-11 {
+          font-size: 2rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          font-family: $textFont;
+          color: $buttonsColor;
+          margin-left: -8px;
+        }
+        .col-1 {
+          color: $green;
+          font-size: 2rem;
+          display: flex;
+          justify-content: flex-end;
+          margin: 10px 0 0 8px;
+        }
+      }
+      .row {
+        margin-bottom: -3px;
+        &:before,
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        [class*='col-'] {
+          float: left;
+          min-height: 1px;
+          // gutter
+          padding: 5px 0 5px 5px;
+        }
+
+        @for $i from 1 through $colLimit {
+          .col-#{$i} {
+            width: ($i/$colLimit) *100%;
+          }
+        }
+      }
+    }
+
+    .underlineFirst {
+      width: 100%;
+      max-width: 1300px;
+      height: 2px;
+      background: $tableColor;
+      margin-top: -2px;
+    }
+
+    .underlineSecond {
+      margin: 15px auto 0;
+      height: .5px;
+      background: $tableColor;
+      width: 98%;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      font-family: $textFont;
+      text-transform: uppercase;
+      color: $headerColor;
+      width: 98%;
+      margin: 10px auto 0;
+    }
+    .underlineRow {
+      margin: 10px auto 0;
+      height: .5px;
+      background: $tableColor;
+      width: 98%;
+    }
+    .mainListOfPlansContainer {
+      overflow: scroll;
+      height: 605px;
+      .divListOfPlansContainer {
+        padding-top: 10px;
+        font-family: $textFont;
+        color: $tableColor;
+        display: flex;
+        .spanID {
+          width: 95px;
+          height: 100px;
+          margin-left: 16px;
+        }
+        .spanPlanName {
+          width: 200px;
+          margin-left: 8px;
+        }
+        .spanPlanDescription {
+          width: 640px;
+        }
+        .spanPlanWeekNumber {
+          width: 120px;
+          margin-left: -40px;
+        }
+        .spanButtonsAction {
+          width: 90px;
+          margin-left: 80px;
+          .fa-trash-alt, .fa-edit {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      .divUnderline {
+        margin: 10px auto 0;
+        height: .5px;
+        background: $tableColor;
+        width: 100%;
       }
     }
   }

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const newRecipe = document.querySelector(".newRecipe");
     const dashboard = document.querySelector(".dashboard");
 
-    newRecipe.addEventListener('click', function(){
+    newRecipe.addEventListener('click', function () {
         dashboard.style.display = "none";
         recipesContainer.style.display = "block";
     });
@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 };
 
                 if (localStorage.getItem("recipe_nr_1") != null) {
-                    console.log('test');
                     recipes.recipesArray.push(recipe);
                     localStorage.setItem(`recipe_nr_${counter}`, JSON.stringify(recipes));
                 } else {

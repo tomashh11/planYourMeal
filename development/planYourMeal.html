@@ -143,7 +143,7 @@
             <a href="#listOfRecipes" id="recipesButton">Przepisy</a>
         </h2>
         <h2 class="plans">
-            <a href="schedules.html">Plany</a>
+            <a href="#listOfPlans" id="plansButton">Plany</a>
         </h2>
     </aside>
     <section class="recipesContainer">
@@ -548,11 +548,31 @@
             </div>
         </form>
     </section>
+    <section class="listOfPlansContainer" id="listOfPlans">
+        <div class="listOfPlans">
+            <div class="row header">
+                <div class="col-11">lista planów</div>
+                <div class="col-1"><i class="fas fa-plus-square"></i></div>
+            </div>
+            <div class="underlineFirst"></div>
+            <div class="underlineSecond"></div>
+            <div class="row title">
+                <div class="col-1">id</div>
+                <div class="col-2">nazwa</div>
+                <div class="col-6">opis</div>
+                <div class="col-2">tydzień</div>
+                <div class="col-1">akcje</div>
+            </div>
+            <div class="underlineRow"></div>
+            <div class="mainListOfPlansContainer"></div>
+        </div>
+    </section>
 </div>
 <script src="js/login.js"></script>
 <script src="js/newRecipe.js"></script>
 <script src="js/listOfRecipes.js"></script>
 <script src="js/newPlan.js"></script>
 <script src="js/weekView.js"></script>
+<script src="js/listOfPlans.js"></script>
 </body>
 </html>

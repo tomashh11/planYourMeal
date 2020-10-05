@@ -5,6 +5,23 @@ document.addEventListener("DOMContentLoaded", function () {
     let userName = form.querySelector("#userName");
     const messageAndFormBgc = document.querySelector(".messageAndFormBgc");
     const dashboard = document.querySelector(".dashboard");
+    const recipesTxt = dashboard.querySelector(".recipesTxt");
+
+    function numberOfRecipes() {
+        for (let i = 100; i >= 0; i--) {
+            if (localStorage.getItem(`recipe_nr_${i}`)) {
+                return i;
+            }
+        }
+    }
+
+    const currentNumberOfRecipes = numberOfRecipes();
+
+    if (currentNumberOfRecipes !== undefined) {
+        recipesTxt.innerHTML = `Masz już ${currentNumberOfRecipes} przepisów, nieźle!`;
+    } else {
+        recipesTxt.innerHTML = "Nie masz narazie żadnego dodanego przepisu!"
+    }
 
     if (localStorage.getItem("savedName") != null) {
         spanUserName.innerHTML = localStorage.savedName;
@@ -20,7 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 localStorage.setItem("savedName", userName.value);
                 spanUserName.innerHTML = userName.value;
-            };
+            }
+            ;
         });
     }
 });
