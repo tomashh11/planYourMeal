@@ -41,16 +41,25 @@ document.addEventListener('DOMContentLoaded', function () {
         textareaProduct.value = "";
     });
 
-    let counter = 0;
+    function checkRecipesCountInStorage() {
+        let count = 0;
+        for (let i = 0; i < localStorage.length; i++) {
+            if (localStorage.key(i).substring(0, 6) == 'recipe') {
+                count++
+            }
+        }
+        return count;
+    };
+
+
     form.addEventListener('submit', function (e) {
-            counter++;
-            // localStorage.clear();
+            let counter = checkRecipesCountInStorage() + 1;
+            e.preventDefault();
             if (!checkCorrectness()) {
                 alert("Wypełnij brakujące pola");
             } else {
                 const liFirstArray = [];
                 const liSecondArray = [];
-                e.preventDefault();
                 const liFirst = document.querySelectorAll(".first");
                 for (const el of liFirst) {
                     liFirstArray.push(el.innerText);
@@ -89,4 +98,5 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     )
-});
+})
+;

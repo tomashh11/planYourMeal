@@ -41,14 +41,17 @@
       cursor: pointer;
       z-index: 2;
     }
-    .btnCarouselPrev:focus {
-      outline: none;
-    }
     .btnCarouselNxt {
       right: 0;
     }
+    .btnCarouselNxt:focus {
+      outline: none;
+    }
     .btnCarouselPrev {
       left: 0;
+    }
+    .btnCarouselPrev:focus {
+      outline: none;
     }
   }
 }

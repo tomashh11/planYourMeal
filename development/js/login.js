@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const messageAndFormBgc = document.querySelector(".messageAndFormBgc");
     const dashboard = document.querySelector(".dashboard");
 
-    // localStorage.clear();
-
     if (localStorage.getItem("savedName") != null) {
         spanUserName.innerHTML = localStorage.savedName;
         messageAndFormBgc.style.display = "none";

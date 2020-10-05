@@ -665,6 +665,7 @@
     }
   }
   .addPlan {
+    display: none;
     background-color: $backgroundColor;
     border: 0.5px dashed $headerColor;
     position: absolute;
