@@ -6,11 +6,11 @@
     color: $headerColor;
     .messageAndFormBgc {
       position: absolute;
-      left: 310px;
-      top: 175px;
+      left: 265px;
+      top: 145px;
       background-color: $backgroundColor;
-      width: 78vw;
-      height: 78vh;
+      width: 1150px;
+      height: 620px;
       border: 0.5px dashed $headerColor;
       .messageAndFormTitle {
         margin-top: 50px;
@@ -53,8 +53,8 @@
     .dashboard {
       display: none;
       position: absolute;
-      left: 300px;
-      top: 170px;
+      left: 265px;
+      top: 145px;
       .dashboardHeader {
         display: flex;
         .widgets {
@@ -68,8 +68,8 @@
             justify-content: center;
             border: 0.5px dashed $green;
             background-color: $backgroundColor;
-            width: 230px;
-            height: 230px;
+            width: 200px;
+            height: 200px;
             .fa-plus-square {
               font-size: 5rem;
             }
@@ -87,8 +87,8 @@
             margin-left: 20px;
             border: 0.5px dashed $green;
             background-color: $backgroundColor;
-            width: 230px;
-            height: 230px;
+            width: 200px;
+            height: 200px;
             .fa-plus-square {
               font-size: 5rem;
             }
@@ -102,21 +102,24 @@
           .numbersOfRecipes {
             display: flex;
             color: $blue;
-            font-size: 1.6rem;
-            height: 70px;
-            width: 800px;
+            font-size: 1.4rem;
+            height: 60px;
+            width: 700px;
             margin-left: 20px;
             border: 0.5px dashed $blue;
             background-color: $backgroundColor;
             .fa-info-circle {
-              line-height: 70px;
-              font-size: 3rem;
+              line-height: 60px;
+              font-size: 2.5rem;
               margin: 0 20px 0 5px;
             }
             .recipesTxt {
-              line-height: 70px;
+              line-height: 60px;
             }
             .fa-window-close {
+              position: absolute;
+              top: 0;
+              right: 8px;
               font-size: 1.2rem;
               margin: 5px 0 0 342px;
             }
@@ -124,48 +127,48 @@
           .planRemember {
             display: flex;
             color: $orange;
-            font-size: 1.6rem;
-            height: 70px;
-            width: 800px;
+            font-size: 1.4rem;
+            height: 60px;
+            width: 700px;
             margin-left: 20px;
             margin-top: 10px;
             border: 0.5px dashed $orange;
             background-color: $backgroundColor;
             .fa-exclamation-circle {
-              line-height: 70px;
-              font-size: 3rem;
+              line-height: 60px;
+              font-size: 2.5rem;
               margin: 0 20px 0 5px;
             }
             .planTxt {
-              line-height: 70px;
+              line-height: 60px;
             }
             .fa-window-close {
               font-size: 1.2rem;
-              margin: 5px 0 0 392px;
+              margin: 5px 0 0 340px;
 
             }
           }
           .goodLuck {
             display: flex;
             color: $green;
-            font-size: 1.6rem;
-            height: 70px;
-            width: 800px;
+            font-size: 1.4rem;
+            height: 60px;
+            width: 700px;
             margin-left: 20px;
             margin-top: 10px;
             border: 0.5px dashed $green;
             background-color: $backgroundColor;
             .fa-check-circle {
-              line-height: 70px;
-              font-size: 3rem;
+              line-height: 60px;
+              font-size: 2.5rem;
               margin: 0 20px 0 5px;
             }
             .luckTxt {
-              line-height: 70px;
+              line-height: 60px;
             }
             .fa-window-close {
               font-size: 1.2rem;
-              margin: 5px 0 0 35px;
+              margin: 5px 0 0 45px;
             }
           }
         }
@@ -173,7 +176,8 @@
       .weekPlan {
         background-color: $backgroundColor;
         border: 0.5px dashed $headerColor;
-        margin-top: 30px;
+        margin-top: 20px;
+        height: 400px;
         $colLimit: 7;
         .weekPlanContainer {
           width: 94%;
@@ -206,24 +210,24 @@
         }
 
         .col-7 {
-          font-size: 1.8rem;
+          font-size: 1.4rem;
           margin: 10px 0;
           color: $buttonsColor;
           font-weight: 400;
         }
 
         .title .col-1 {
-          font-size: 1.5rem;
+          font-size: 1.1rem;
           color: $navigationColor;
           font-weight: 700;
-          margin: 10px 0;
+          margin: 8px 0;
         }
 
         .col-1 {
-          font-size: 1.2rem;
+          font-size: 1rem;
           color: $tableColor;
           text-align: center;
-          margin: 8px 0;
+          margin: 4px 0;
         }
 
         .underline {
@@ -253,9 +257,9 @@
 
         .prev {
           cursor: pointer;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          position: absolute;
+          bottom: 5px;
+          left: 10px;
           font-weight: 400;
           margin-bottom: 5px;
 
@@ -270,9 +274,9 @@
 
         .next {
           cursor: pointer;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          position: absolute;
+          bottom: 5px;
+          left: 1037px;
           font-weight: 400;
           margin-bottom: 5px;
 
@@ -353,7 +357,7 @@
         font-family: "Font Awesome 5 Free";
         font-size: 1.5rem;
         color: $buttonsColor;
-        margin-left: 8.3rem;
+        margin-left: 6.3rem;
       }
     }
     .recipes {
@@ -369,7 +373,7 @@
         font-family: "Font Awesome 5 Free";
         font-size: 1.5rem;
         color: $buttonsColor;
-        margin-left: 6.5rem;
+        margin-left: 4.5rem;
       }
     }
     .plans {
@@ -385,20 +389,20 @@
         font-family: "Font Awesome 5 Free";
         font-size: 1.5rem;
         color: $buttonsColor;
-        margin-left: 8.5rem;
+        margin-left: 6.5rem;
       }
     }
   }
   .recipesContainer {
     display: none;
     position: absolute;
-    top: 120px;
-    left: 310px;
+    top: 145px;
+    left: 265px;
     background-color: $backgroundColor;
     border: 0.5px dashed $headerColor;
-    width: 1300px;
-    height: 740px;
-    margin: 3rem auto 0;
+    width: 1150px;
+    height: 620px;
+    margin: 0 auto;
     font-family: $textFont;
     .recipesHeader {
       display: flex;
@@ -463,9 +467,10 @@
     .mainRecipeContainer {
       display: flex;
       justify-content: space-between;
-      margin: 40px auto 0;
+      margin: 0 auto;
       width: 96%;
       .recipeInstruction {
+        margin-top: 20px;
         width: 50%;
         .recipeH3 {
           font-size: 1.6rem;
@@ -482,7 +487,6 @@
           justify-content: flex-start;
           #instruction {
             width: 85%;
-            margin-left: 15px;
             border: 1px solid $tableColor;
           }
           .recipesAdd {
@@ -495,7 +499,7 @@
         .recipesNavInstruction {
           margin: 50px 0 0 18px;
           width: 485px;
-          height: 280px;
+          height: 180px;
           overflow: scroll;
           .olInstruction {
             margin-left: 18px;
@@ -503,6 +507,7 @@
         }
       }
       .recipeProduct {
+        margin-top: 20px;
         width: 50%;
         .recipeH3 {
           font-size: 1.6rem;
@@ -520,21 +525,21 @@
           justify-content: center;
           #product {
             width: 88%;
-            margin-top: 15px;
+            height: 90px;
             margin-left: 12px;
             border: 1px solid $tableColor;
           }
           .recipesAdd {
             display: flex;
             color: green;
-            margin: 13px 0 0 6px;
+            margin: -2px 0 0 6px;
             font-size: 2rem;
           }
         }
         .recipesNavProduct {
-          margin: 82px 0 0 25px;
+          margin: 50px 0 0 25px;
           width: 505px;
-          height: 280px;
+          height: 180px;
           overflow: scroll;
           .ulProduct {
             margin-left: 20px;
@@ -548,10 +553,10 @@
     background-color: $backgroundColor;
     border: 0.5px dashed $headerColor;
     position: absolute;
-    top: 170px;
-    left: 320px;
-    width: 1300px;
-    height: 740px;
+    top: 145px;
+    left: 265px;
+    width: 1150px;
+    height: 620px;
     $colLimit: 12;
     .listOfRecipes {
       width: 94%;
@@ -629,7 +634,7 @@
     }
     .mainListOfRecipesContainer {
       overflow: scroll;
-      height: 605px;
+      height: 485px;
       .divListOfRecipesContainer {
         padding-top: 10px;
         font-family: $textFont;
@@ -665,13 +670,14 @@
     }
   }
   .addPlan {
+    display: none;
     background-color: $backgroundColor;
     border: 0.5px dashed $headerColor;
     position: absolute;
-    top: 1000px;
-    left: 320px;
-    width: 1300px;
-    height: 630px;
+    top: 145px;
+    left: 265px;
+    width: 1150px;
+    height: 620px;
     font-family: $textFont;
     $colLimit: 6;
     .planHeader {
@@ -704,7 +710,7 @@
     }
     .planName {
       color: $navigationColor;
-      font-size: 1.2rem;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       width: 90%;
@@ -713,7 +719,7 @@
         font-weight: 300;
       }
       #planName {
-        width: 950px;
+        width: 840px;
         height: 30px;
         font-size: 20px;
         margin-left: 50px;
@@ -721,7 +727,7 @@
     }
     .planDescription {
       color: $navigationColor;
-      font-size: 1.2rem;
+      font-size: 1rem;
       display: flex;
       width: 90%;
       margin: 10px 0 0 40px;
@@ -729,14 +735,14 @@
         font-weight: 300;
       }
       #planDescription {
-        width: 950px;
+        width: 840px;
         font-size: 20px;
-        margin-left: 77px;
+        margin-left: 72px;
       }
     }
     .newPlanWeekNumber {
       color: $navigationColor;
-      font-size: 1.2rem;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       width: 90%;
@@ -748,7 +754,7 @@
         font-size: 20px;
         height: 30px;
         width: 50px;
-        margin-left: 15px;
+        margin-left: 13px;
       }
     }
     .planUnderlineSecondContainer {
@@ -776,7 +782,7 @@
           float: left;
           min-height: 1px;
           // gutter
-          padding: 5px 0 5px 5px;
+          padding: 4px 0 4px 5px;
         }
 
         @for $i from 1 through $colLimit {
@@ -788,7 +794,7 @@
       .title {
         display: flex;
         align-items: center;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 700;
         color: $navigationColor;
         text-transform: uppercase;
@@ -810,11 +816,137 @@
         text-align: center;
         margin-right: 90px;
         .monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday {
-          font-size: 1rem;
+          font-size: 0.8rem;
           font-weight: 700;
           color: $navigationColor;
           text-transform: uppercase;
+          height: 32px;
         }
+      }
+    }
+  }
+
+  .listOfPlansContainer {
+    display: none;
+    background-color: $backgroundColor;
+    border: 0.5px dashed $headerColor;
+    position: absolute;
+    top: 145px;
+    left: 265px;
+    width: 1150px;
+    height: 620px;
+    $colLimit: 12;
+    .listOfPlans {
+      width: 94%;
+      margin: 0 auto;
+      .header {
+        .col-11 {
+          font-size: 2rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          font-family: $textFont;
+          color: $buttonsColor;
+          margin-left: -8px;
+        }
+        .col-1 {
+          color: $green;
+          font-size: 2rem;
+          display: flex;
+          justify-content: flex-end;
+          margin: 10px 0 0 8px;
+        }
+      }
+      .row {
+        margin-bottom: -3px;
+        &:before,
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        [class*='col-'] {
+          float: left;
+          min-height: 1px;
+          // gutter
+          padding: 5px 0 5px 5px;
+        }
+
+        @for $i from 1 through $colLimit {
+          .col-#{$i} {
+            width: ($i/$colLimit) *100%;
+          }
+        }
+      }
+    }
+
+    .underlineFirst {
+      width: 100%;
+      max-width: 1300px;
+      height: 2px;
+      background: $tableColor;
+      margin-top: -2px;
+    }
+
+    .underlineSecond {
+      margin: 15px auto 0;
+      height: .5px;
+      background: $tableColor;
+      width: 98%;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      font-family: $textFont;
+      text-transform: uppercase;
+      color: $headerColor;
+      width: 98%;
+      margin: 10px auto 0;
+    }
+    .underlineRow {
+      margin: 10px auto 0;
+      height: .5px;
+      background: $tableColor;
+      width: 98%;
+    }
+    .mainListOfPlansContainer {
+      overflow: scroll;
+      height: 485px;
+      .divListOfPlansContainer {
+        padding-top: 10px;
+        font-family: $textFont;
+        color: $tableColor;
+        display: flex;
+        .spanID {
+          width: 95px;
+          height: 100px;
+          margin-left: 16px;
+        }
+        .spanPlanName {
+          width: 200px;
+          margin-left: 8px;
+        }
+        .spanPlanDescription {
+          width: 640px;
+        }
+        .spanPlanWeekNumber {
+          width: 120px;
+          margin-left: -40px;
+        }
+        .spanButtonsAction {
+          width: 90px;
+          margin-left: 80px;
+          .fa-trash-alt, .fa-edit {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      .divUnderline {
+        margin: 10px auto 0;
+        height: .5px;
+        background: $tableColor;
+        width: 100%;
       }
     }
   }
