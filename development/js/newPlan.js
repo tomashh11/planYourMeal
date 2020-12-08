@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 days: days
             };
 
-            // localStorage.clear();
 
             if (localStorage.getItem("plans") !== null) {
                 let planFromStorage = new Map(JSON.parse(localStorage.getItem("plans")));
