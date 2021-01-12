@@ -11,4 +11,10 @@ Użyj przycisków (na pulpicie) "**następny**" i "**poprzedni**", żeby zobaczy
 
 ## EN
 ### Page and Application created for 1440x788 resolution.
-**Dietary page and application**
+**Dietary page and application**.
+Click "**ZAPLANUJ POSILKI**" in navigation to run application.  
+Use "**dodaj przepis**" and "**dodaj plan**" widgets to add your own meal plans and recipes.  
+Use left navigation to switch views beetween plans, recipes and dashboard.  
+After you add your meal plans you will see them on dashboard, if there is no plan for current week dashboard will show you the nearest (future) plan.  
+Use "**następny**" and "**poprzedni**" dashboard buttons to see next and previous meal plans.
+
