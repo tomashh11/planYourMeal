@@ -11,7 +11,7 @@ Użyj przycisków (na pulpicie) "**następny**" i "**poprzedni**", żeby zobaczy
 
 ## EN
 ### Page and Application created for 1440x788 resolution.
-**Dietary page and application**.
+**Dietary page and application**.  
 Click "**ZAPLANUJ POSILKI**" in navigation to run application.  
 Use "**dodaj przepis**" and "**dodaj plan**" widgets to add your own meal plans and recipes.  
 Use left navigation to switch views beetween plans, recipes and dashboard.  
